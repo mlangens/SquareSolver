@@ -63,6 +63,7 @@ public class SquareSolver {
         + ")(" + x + "+" + y + ") = " + xMinusY + "*" + xPlusY;
   }
 
+  // adds leading zeros to m in order to line up console output
   private String formatM(int m) {
     String mString = Integer.toString(m);
     if (m < 10)
