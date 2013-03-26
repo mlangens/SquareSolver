@@ -59,13 +59,15 @@ public class SquareSolver {
     int xMinusY = x - y;
     int xPlusY = x + y;
     String mString = formatM(m);
-    output += mString + "        = " + (int) xSquared + "-" + ySquared + " = " + x + "^2-" + y + "^2 = (" + x
-        + "-" + y + ")(" + x + "+" + y + ") = " + xMinusY + "*" + xPlusY;
+    output += mString + "        = " + (int) xSquared + "-" + ySquared + " = " + x + "^2-" + y + "^2 = (" + x + "-" + y
+        + ")(" + x + "+" + y + ") = " + xMinusY + "*" + xPlusY;
   }
 
   private String formatM(int m) {
     String mString = Integer.toString(m);
     if (m < 10)
+      mString = 00 + mString;
+    if (m < 100)
       mString = 0 + mString;
     return mString;
   }
