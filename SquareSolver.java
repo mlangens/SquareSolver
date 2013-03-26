@@ -7,6 +7,7 @@ public class SquareSolver {
     stepOne(m);
   }
 
+  //accessor method for modified string
   public String getOutput() {
     return output;
   }
