@@ -5,8 +5,10 @@ public class SquareSolver {
   // object constructor processes input then prints manipulated output
   public SquareSolver(int m) {
     stepOne(m);
-    System.out.println(output);
-    System.out.println();
+  }
+
+  public String getOutput() {
+    return output;
   }
 
   // input m is converted to x, compared, and outputs/returns if a perfect
