@@ -5,8 +5,7 @@ public class Driver {
     SquareSolver solver;
     for (int i = 3; i <= 199; i += 2) {
       solver = new SquareSolver(i);
-      System.out.println(solver.getOutput());
-      System.out.println();
+      System.out.println(solver.getOutput() + "\n");
     }
   }
 }
