@@ -16,8 +16,8 @@ public class SquareSolver {
     int x = (int) Math.floor(Math.sqrt(m));
     int xSquared = (int) Math.pow(x, 2);
     if (xSquared == m) {
-      //y is always 0 in a perfect square
-      int y=0;
+      // y is always 0 in a perfect square
+      int y = 0;
       manipulateFactorizationString(m, x, xSquared, y);
       return;
     } else {
@@ -30,7 +30,8 @@ public class SquareSolver {
   private void stepTwo(int m, int x) {
     x++;
     if (x == (m + 1) / 2) {
-      output += m + "        m is a prime";
+      String mString = formatM(m);
+      output += mString + "        is a prime";
       return;
     } else {
       stepThree(m, x);
@@ -57,8 +58,16 @@ public class SquareSolver {
     int ySquared = (int) Math.pow(y, 2);
     int xMinusY = x - y;
     int xPlusY = x + y;
-    output += m + "        =    " + (int) xSquared + "-" + ySquared + "    =    " + x + "^2-" + y + "^2    =    (" + x
-        + "-" + y + ")(" + x + "+" + y + ")    =    " + xMinusY + "*" + xPlusY;
+    String mString = formatM(m);
+    output += mString + "        = " + (int) xSquared + "-" + ySquared + " = " + x + "^2-" + y + "^2 = (" + x
+        + "-" + y + ")(" + x + "+" + y + ") = " + xMinusY + "*" + xPlusY;
+  }
+
+  private String formatM(int m) {
+    String mString = Integer.toString(m);
+    if (m < 10)
+      mString = 0 + mString;
+    return mString;
   }
 
 }
